@@ -1,0 +1,160 @@
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+          <div class="col-md-4">
+            <div>
+              <div class="card dashboard-visit">
+                <div class="card-header">
+                    <h6>Visits</h6>
+                    <span>Today</span>
+                    <i class="fa fa-times"></i>
+                  </div>
+                <div class="card-body">
+                  <div class="row">
+                      <div class="col md 2" style="border-right: 1px solid rgba(0, 0, 0, 0.125); padding:1.3em;">
+                          <div style="font-size:0.7em;text-align: center;">Planned Visits</div><br>
+                          <div style="font-size:1.2em; font-weight:600; text-align: center; margin-top: -1.2em;color:#17a2b8">60</div>
+                      </div>
+                      <div class="col md 2" style="padding:1.3em;">
+                          <div style="font-size:0.7em; text-align: center;">Self Assigned visits</div><br>
+                          <div style="font-size:1.2em; font-weight:600; text-align: center; margin-top: -1.2em;color:#6f42c1">30</div>
+                      </div>
+                  </div>
+                  <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.125);margin:0px;">
+                    <div class="col md 2" style="border-right: 1px solid rgba(0, 0, 0, 0.125); padding:1.3em;">
+                        <div style="font-size:0.7em;text-align: center;">Pending Visits</div>
+                        <div style="font-size:1.2em; font-weight:700; text-align: center;margin-top: 0.2em;color:#dc3545">10</div>
+                    </div>
+                      <div class="col md 2" style="padding:1.3em;">
+                          <div style="font-size:0.7em;text-align: center;">Skipped Visits</div>
+                          <div style="font-size:1.2em; font-weight:600; text-align: center;margin-top: 0.2em;color:#ffc107">5</div>
+                      </div>
+                      
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+              <div>
+                <div class="card dashboard-visit">
+                  <div class="card-header">
+                      <h6>Tasks</h6>
+                      <span>Month</span>
+                      <i class="fa fa-times"></i>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                        <div class="col md 2" style="border-right: 1px solid rgba(0, 0, 0, 0.125); padding:1.4em;">
+                            <div style="font-size:0.7em;text-align: center;">Total Task</div><br>
+                            <div style="font-size:1.2em; font-weight:600; text-align: center; margin-top: -1.2em;color:#17a2b8">20</div>
+                        </div>
+                        <div class="col md 2" style="padding:1.4em;">
+                            <div style="font-size:0.7em; text-align: center;">Completed Task</div><br>
+                            <div style="font-size:1.2em; font-weight:600; text-align: center; margin-top: -1.2em;color:#6f42c1">10</div>
+                        </div>
+                    </div>
+                    <div class="row" style="border-top: 1px solid rgba(0, 0, 0, 0.125);margin:0px;">
+                      <div class="col md 2" style="border-right: 1px solid rgba(0, 0, 0, 0.125); padding:1.3em;">
+                          <div style="font-size:0.7em;text-align: center;">Pending Task</div>
+                          <div style="font-size:1.2em; font-weight:600; text-align: center;margin-top: 0.2em;color:#dc3545">5</div>
+                      </div>
+                        <div class="col md 2" style="padding:1.3em;">
+                            <div style="font-size:0.7em;text-align: center;">Cancelled Task</div>
+                            <div style="font-size:1.2em; font-weight:600; text-align: center;margin-top: 0.2em;color:#ffc107">5</div>
+                        </div>
+                        
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+          </div>
+          
+          
+          <div class="col-md-4">
+            <div>
+              <div class="card dashboard-visit">
+                <div class="card-header">
+                    <h6>Progress Status</h6>
+                    <span>Week</span>
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="card-body" style="padding:0.3em">
+                  <div class="row">
+                    <div class="col md 2" style="padding:2em;">
+                      <circle-progress
+                      [percent]="85"
+                      [radius]="45"
+                      [outerStrokeWidth]="2"
+                      [innerStrokeWidth]="2"
+                      [outerStrokeColor]="'#78C000'"
+                      [innerStrokeColor]="'#C7E596'"
+                      [animation]="true"
+                      [animationDuration]="300"
+                    ></circle-progress>
+                    </div>
+                    <div class="col md 2" style="padding: 3.9em 2em;">
+                      <div style="font-size:0.6em; color:gray"> 
+                      <i class="far fa-square" style="color:gray;"></i>&nbsp; Pending:15%<br>
+                      </div>
+                      <div style="font-size:0.6em; color:gray">
+                      <i class="fas fa-square" style="color:#78C000"></i>&nbsp; Completed:85%
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div>
+              <div class="dashboard-visit">
+                <div class="card-header">
+                    <h6>Expense</h6>
+                    <span>Week</span>
+                    <i class="fa fa-times" style="padding:0px;top:0.4em;right:1.8em"></i>
+                </div>
+                <div>
+                    <div class="row" style="margin:0px;margin-top:0.24em;">
+                        <div class="col md 2" style="padding: 0px 0.4em 0.4em 0px;">
+                              <div style="background:white;padding:1.1em">
+                                  <div style="font-size:0.7em;text-align: center;">Total Expense</div><br>
+                                  <div class="count" style="font-size:1.2em; font-weight:600; text-align: center; margin-top: -1.2em;color:#17a2b8">60 <small>Rs</small> </div>
+                              </div>
+                        </div>
+                        <div class="col md 2" style="padding: 0px 0px 0.4em 0.4em;">
+                          <div style="background:#6f42c1;padding:1.1em;">
+                              <div style="font-size:0.7em; text-align: center;color:white;">Food Expense</div><br>
+                              <div style="font-size:1em; font-weight:600; text-align: center; margin-top: -1.2em;color:white">30 <small>Rs</small> </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin:0px;">
+                      <div class="col md 2" style="padding: 0.4em 0.4em 0px 0px;">
+                          <div style="background:#17a2b8;padding:1.1em;">
+                              <div style="font-size:0.7em;text-align: center;color:white;">Travel Expense</div>
+                              <div style="font-size:1.2em; font-weight:600; text-align: center;margin-top: 0.2em;color:white;">10 <small>Rs</small> </div>
+                          </div>
+                      </div>
+                        <div class="col md 2" style="padding: 0.4em 0px 0px 0.4em;">
+                            <div style="background:white;padding:1.1em;">
+                                <div style="font-size:0.7em;text-align: center;">Stay Expense</div>
+                                <div style="font-size:1.2em; font-weight:600; text-align: center;margin-top: 0.2em;color:#ffc107">5 <small>Rs</small> </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>  
+

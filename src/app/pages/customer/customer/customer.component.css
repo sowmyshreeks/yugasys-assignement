@@ -1,0 +1,77 @@
+.input-group {
+    width: 103%;
+}
+
+
+
+.tab-content {
+    border: none;
+}
+
+
+  ul{
+    margin-bottom: 0rem;
+  }
+  label{
+    font-size: 0.9em;
+  }
+  .form-control{
+    font-size: 0.9em;
+  }
+
+
+
+.filter{
+  padding: 0.3rem 0.556rem;
+    font-size: 0.7rem;
+    box-shadow: none !important;
+    border: 1px solid #ced4da;
+    color: #607d8b;
+    margin-left: 1.5em;
+    background: white;
+    float: right;
+}
+.add{
+  padding: 0.2rem 0.4rem;
+  background: white;
+  font-size: 0.7rem;
+  box-shadow: none !important;
+  border: 1px solid #ced4da;
+  color:#607d8b;
+}
+
+
+
+
+
+.badge-info{
+  border-radius: 0px;
+  padding: 0.4em;
+  font-size: 0.7em;
+  margin-right: 0.6em;
+  background-color: #00bcd4!important
+}
+
+.form-control{
+font-size: 0.75rem;
+/* // width: 50%; */
+height: calc(1.6rem + 2px);
+padding: 0.12rem 0.4rem;
+
+}
+.form-group {
+margin-bottom: 0.5rem;
+}
+.picker{
+float:right;
+padding-right:0px;
+padding-left:3em;
+}
+.input-group-text {
+padding: 0.2rem 0.75rem;
+font-size: 0.75rem;
+}
+
+.md-drppicker {
+  left: -306px !important;
+}

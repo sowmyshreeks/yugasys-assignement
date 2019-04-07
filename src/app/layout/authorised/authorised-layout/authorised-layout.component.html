@@ -1,0 +1,71 @@
+<div id="layoutContent">
+
+  <!-- Left Panel -->
+  <aside id="left-panel" class="left-panel">
+    <nav class="navbar navbar-expand-sm navbar-default">
+      <div id="main-menu" class="main-menu collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+
+          <li class="dropdown" [class.menu-item-has-children]="sideMenu.children" *ngFor="let sideMenu of sideMenuList">
+            <a [routerLink]="sideMenu.url" class="dropdown-toggle" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" routerLinkActive="active-menu ">
+              <i class={{sideMenu.icon}}></i>
+              {{sideMenu.title}}
+            </a>
+
+            <ul class="sub-menu children dropdown-menu" *ngIf="sideMenu.children">
+              <li *ngFor="let childMenu of sideMenu.children"><i class="{{childMenu.icon}}"></i><a [routerLink]="childMenu.url" routerLinkActive="active-menu ">{{childMenu.title}}</a></li>
+            </ul>
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+  <!-- /#left-panel -->
+  <!-- Right Panel -->
+  <div id="right-panel" class="right-panel">
+    <!-- Header-->
+    <header id="header" class="header">
+      <div class="top-left">
+        <div class="navbar-header">
+          <a id="menuToggle" (click)="toggleMenu()" class="menutoggle"><i class="fa fa-bars"></i></a>
+          <a class="navbar-brand" href="./"><img src="./assets/images/angular-226066.png" width=35em; height=35em;
+              alt="Logo" style="margin-left: 1em;"></a>
+          <!-- <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a> -->
+        </div>
+      </div>
+      <div class="top-right">
+        <div class="header-menu">
+          
+
+          <div class="user-area dropdown float-right">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="user-avatar rounded-circle" src="./assets/images/admin.jpg" alt="User Avatar">
+            </a>
+
+            <div class="user-menu dropdown-menu">
+              <!-- <a class="nav-link" href="#" data-toggle="modal" data-target="#myProfile"><i class="fas fa-user"></i>My Profile</a> -->
+
+              <!-- <a class="nav-link" href="#" data-toggle="modal" data-target="#changePassword"><i class="fa fa-lock"></i>Change Password</a> -->
+
+              <a class="nav-link" [routerLink]="['/settings/settings']" ><i class="fas fa-user"></i>Profile</a>
+
+              <a class="nav-link" [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <!-- /#header -->
+    <!-- Content -->
+    <div>
+      <app-page-content></app-page-content>
+    </div>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+    <app-authorised-footer></app-authorised-footer>
+  </div>
+</div>
+

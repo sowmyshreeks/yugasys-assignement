@@ -1,0 +1,226 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+html {
+  height: 100%;
+}
+
+body {
+  display: table;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  padding-right:0px !important; 
+ }
+ 
+ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+ }
+
+p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.756em;
+}
+
+div{
+  font-family: "Open Sans", sans-serif;
+}
+
+.content {
+  min-height: 33.2rem;
+}
+// .content{
+//   padding-top:0px !important;
+// }
+.content{
+  padding:1rem;
+}
+/* breadcrumbs */
+// .breadcrumbs {
+//   margin-bottom:2rem;
+// }
+// .breadcrumb {
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding: 0.75rem 1rem;
+//    margin-bottom: 0px !important; 
+//   list-style: none;
+//   background-color: white !important;
+//   border-radius: 0.25rem;
+// }
+
+// .breadcrumbs-inner {
+//   background-color: #fff;
+// }
+
+  
+//   .breadcrumb>li+li:before{
+//       padding: 0 5px;
+//       color: #ccc;
+//       content: "/\00a0";
+//   }
+//   .breadcrumbs a{
+//       color:#DD8643;
+//   }
+/* end breadcrumbs */
+
+// .card-header {
+//    background-color: white !important;
+//   border-bottom: none !important;
+// }
+// .card{
+//   border:none !important;
+// }
+
+/*  calender css start */
+
+.fc-day-grid-event .fc-content {
+  white-space: nowrap;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+  border:none !important;
+  background-color: white !important;
+  background-image: linear-gradient(120deg,#00e795 0,#0095e2 100%);
+ //background-image: linear-gradient(120deg,#00e795 0,#0095e2 100%);
+ }
+
+ .modal {
+  z-index: 1060;
+}
+ 
+ .fc-day-header {
+  background-color: #605daf;
+  color: white
+ }
+ .fc-toolbar .fc-left {
+  font-size: 0.75em ;
+  margin: 0.8em 0.3em ;
+}
+.fc-toolbar .fc-right {
+  font-size: 0.75em;
+  margin: 0.8em 0.3em;
+}
+
+ .al-title{
+   font-size: 1em !important;
+   font-weight: 600;
+ }
+
+ .fa-check-circle{
+            color:#28a745;
+ }
+ .fa-question-circle{
+   color:#dc3545;
+ }
+ .fa-download{
+   color:gray;
+ }
+ .fa-minus-circle{
+   color:#ffc107;
+ }
+ .fa-times-circle{
+  color:#dc3545;
+ }
+.fa-check{
+  color:#28a745;
+
+}
+ .header{
+  padding:1em;
+  border-bottom:1px solid #e1e1e1;
+  background-color: #f5f5f5;
+  text-align: left;
+  font-weight: 600;
+}
+
+
+// svg{
+//   margin-left: 12.34em !important;
+//   margin-top: -4.68em !important;
+// }
+
+
+.mat-icon-button {
+  margin-top: -2.45em !important;
+  margin-left: 15.5em !important;
+  position:absolute !important;
+}
+
+button:focus{
+outline: none !important;
+};
+
+ .fc-event {
+  position: relative;
+  display: block;
+  font-size: .85em;
+  line-height: 1.3;
+  border-radius: 3px;
+  border: none !important;
+}
+// h2, .h2 {
+//   font-size: 1.4rem !important;
+//   margin-top:0.2em !important;
+// }
+
+.md-drppicker {
+  width: 43em !important;
+  left: -306px !important;
+  top: 37px !important;
+  padding:0px !important
+}
+// .md-drppicker .btn.btn-default {
+//   margin-right:0.7em !important;
+// }
+//  .md-drppicker .drops-down-right .ltr .shown .double{
+//    top:3.5em !important;
+//  }
+ .card-header:first-child {
+  border-radius: 0px !important;
+}
+.mat-drawer-container {
+  background-color: #f1f2f7 !important;
+  color: rgba(0,0,0,.87);
+}
+.mat-drawer-content {
+  overflow: hidden !important;
+}
+
+.ng-select {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  margin: 0.5em 0.9em;
+  font-size: 0.752em;
+  font-family: "Open Sans", sans-serif;
+}
+.picker{
+  float:right;
+  padding-right:0px;
+  padding-left:3em;
+}
+.ng-select .ng-select-container {
+  min-height: 30px !important;
+  // width: 87% !important;
+}
+
+.canvasjs-chart-toolbar{
+  display:none !important;
+}
+.canvasjs-chart-credit{
+  display:none !important;
+}
+.mat-drawer-inner-container {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    // border-right: 1px solid rgba(0, 0, 0, 0.125);
+    
+}
+
+
+@import "./../node_modules/angular-calendar/css/angular-calendar.css";
+@import "~fullcalendar/dist/fullcalendar.min.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";

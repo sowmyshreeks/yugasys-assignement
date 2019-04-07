@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="./assets/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/themify-icons.css">
+  <link rel="stylesheet" href="./assets/fontawesome5/css/all.css" >
+  <link rel="stylesheet" href="./assets/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/ol.css" type="text/css">
+  <link href="./assets/Material-Icons.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <!-- Scripts -->
+  <script src="./assets/scriptfile/jquery.min.js"></script>
+  <script src="./assets/scriptfile/popper.min.js"></script>
+  <script src="./assets/scriptfile/jquery.matchHeight.min.js"></script>
+  <script src="./assets/scriptfile/bootstrap.min.js"></script>
+  <script src="./assets/scriptfile/ol.js" type="text/javascript"></script>
+
+  <script>
+    $.noConflict();
+
+    jQuery(document).ready(function ($) {
+
+      "use strict";
+
+      [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+        new SelectFx(el);
+      });
+
+      jQuery('.selectpicker').selectpicker;
+
+
+      $('.equal-height').matchHeight({
+        property: 'max-height'
+      });
+
+      $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            }
+          });
+      });
+
+      
+      // Load Resize 
+      $(window).on("load resize", function (event) {
+        var windowWidth = $(window).width();
+        if (windowWidth < 1010) {
+
+          $('#layoutContent').addClass('small-device');
+        } else {
+          $('#layoutContent').removeClass('small-device');
+        }
+
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-4 text-left">
+            <h6 class="al-title">Data Table</h6>
+        </div>
+        
+    </div>
+        <div class="row">
+            <div class="col md 2">
+                    <h6>
+                            <span class="badge badge-info">Total data: &nbsp; 8</span>
+                    </h6>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom:0.7em;">
+          <div class="col md 2"></div>
+              <div class="col-md-10">
+                   <button type="button" class="btn filter" (click)="sideNav.toggle()">Filters <i class="fa fa-filter"></i></button>
+                   <div class="col-md-4 pull-right" style="padding-right:0px;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search for Customer..">
+                    </div>
+                   </div>
+                   <!-- <div class="col-md-4 picker">
+                    <div class="input-group">
+                        <input type="text" ngxDaterangepickerMd [(ngModel)]="selected" class="form-control"
+                            [showCancel]="true" [showClearButton]="true" [ranges]="ranges"
+                            [alwaysShowCalendars]="true" [locale]="{format: 'DD-MM-YYYY'}" placeholder="Date" />
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                            </div>
+                    </div>
+                </div> -->
+                  </div>
+        </div>
+        <mat-drawer-container>
+            <mat-drawer #sideNav style="width: 40vmin;" mode="side" opened="false" [position]="nav_position">
+              
+              <div class="card" style="border:none;">
+                <div class="card-header">Filters</div>
+                <!-- <label>Your first ng-select</label> -->
+                <ng-select [items]="cities"
+                           bindLabel="name"
+                           placeholder="Select Name"
+                           [(ngModel)]="selectedCity">
+                </ng-select>
+          
+                  <ng-select [items]="cities"
+                             bindLabel="name"
+                             placeholder="Select city"
+                             [(ngModel)]="selectedCity">
+                  </ng-select>
+                  <ng-select [items]="cities"
+                             bindLabel="name"
+                             placeholder="Select Type of customer"
+                             [(ngModel)]="selectedCity">
+                  </ng-select>
+                  <ng-select [items]="cities"
+                           bindLabel="name"
+                           placeholder="Select Custom1"
+                           [(ngModel)]="selectedCity">
+                  </ng-select>
+                  <ng-select [items]="cities"
+                           bindLabel="name"
+                           placeholder="Select Custom2"
+                           [(ngModel)]="selectedCity">
+                  </ng-select>
+                  </div>
+          
+            </mat-drawer>
+            <mat-drawer-content>
+<div class="animated fadeIn">
+  <div class="row">
+      <div class="col md 12">
+          <div class="card">
+              <div class="card-body" style="padding:0px;">
+                <table class="table table-striped" style="font-size:0.756em">
+                  <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Address</th>
+                          <th>Country</th>
+                          <th>Contact Person</th>
+                          <th>Email</th>
+                          <th>Created Date</th>
+                      </tr>
+                   </thead>
+                  <tbody>
+                      <tr *ngFor = "let cust of customerList">
+                              <td>{{cust.companyName}}</td>
+                              <td>{{cust.address}}</td>
+                              <td>{{cust.country}}</td>
+                              <td>{{cust.contactNo}}</td>
+                              <td>{{cust.email}}</td>
+                              <td>{{cust.date}}</td>
+                      </tr>
+                  </tbody>
+              </table>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>
+</mat-drawer-content>
+</mat-drawer-container>
+</div>
+
