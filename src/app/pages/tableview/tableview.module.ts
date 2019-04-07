@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { MaterialModule } from 'src/app/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CustomerRoutingModule } from './cutomer-routing.module';
-import { CustomerComponent } from './customer/customer.component';
+import { TableviewRoutingModule } from './tableview-routing.module';
+import { TableViewComponent } from './tableview/tableview.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
@@ -14,11 +14,11 @@ import { NgSelectModule } from '@ng-select/ng-select';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule, 
-    CustomerRoutingModule,
+    TableviewRoutingModule,
     NgSelectModule
 
   ],
-  declarations: [CustomerComponent, ],
+  declarations: [TableViewComponent, ],
   providers: []
 })
-export class CustomerModule { }
+export class TableviewModule { }

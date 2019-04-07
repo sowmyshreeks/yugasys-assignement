@@ -9,7 +9,7 @@ export const side_menu_items = [
     {
         title: 'Table View',
         icon: 'menu-icon fas fa-list-ul',
-        url: '/customer/customers',
+        url: '/table/tableview',
     },
     {
         title: 'Grid View',

@@ -45,7 +45,7 @@ const routes: Routes = [
         
       },
       {
-        path: 'customer', loadChildren: './pages/customer/cutomer.module#CustomerModule',
+        path: 'table', loadChildren: './pages/tableview/tableview.module#TableviewModule',
       },
     ]
   },

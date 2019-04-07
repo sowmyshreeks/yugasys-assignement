@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CustomerComponent } from './customer/customer.component';
+import { TableViewComponent } from './tableview/tableview.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CustomerComponent,
+    component: TableViewComponent,
     pathMatch: 'full'
   },
   { 
-      path: 'customers', 
-      component: CustomerComponent, 
+      path: 'tableview', 
+      component: TableViewComponent, 
       pathMatch: 'full'
   },
   
@@ -21,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CustomerRoutingModule { }
+export class TableviewRoutingModule { }

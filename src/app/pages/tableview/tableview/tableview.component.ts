@@ -6,34 +6,15 @@ import * as moment from 'moment';
 
 // declare var $: any;
 @Component({
-  templateUrl: 'customer.component.html',
-  styleUrls: ["customer.component.css"]
+  templateUrl: 'tableview.component.html',
+  styleUrls: ["tableview.component.css"]
 })
-export class CustomerComponent implements OnInit{
+export class TableViewComponent implements OnInit{
 
   selectedCity: any;
-  Custom1: any;
-  Custom2: any;
-  Custom3: any;
-  Custom4: any;
-  Custom5: any;
-  gst_no: any;
-  pan_no: any;
-  phone_no: any;
+  
 
-  curDate = moment();
-  date = new FormControl(new Date());
-  serializedDate = new FormControl((new Date()).toISOString());
-  selected: any = { startDate: moment(), endDate: moment() };
-  ranges: any = {
-    'Today': [moment(), moment()],
-    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-    'This Month': [moment().startOf('month'), moment().endOf('month')],
-    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-  }
-
+  
 
   cities = [
     {id: 1, name: 'Vilnius'},
