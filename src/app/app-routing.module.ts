@@ -37,10 +37,6 @@ const routes: Routes = [
         loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
       },
       {
-        path: 'plan',
-        loadChildren: './pages/plan/plan.module#PlanModule'
-      },
-      {
         path: 'grid', loadChildren: './pages/grid/grid.module#GridModule',
         
       },

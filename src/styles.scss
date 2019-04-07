@@ -218,6 +218,18 @@ outline: none !important;
     // border-right: 1px solid rgba(0, 0, 0, 0.125);
     
 }
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.mat-form-field {
+  width:19.2em;
+}
+
 
 
 @import "./../node_modules/angular-calendar/css/angular-calendar.css";
