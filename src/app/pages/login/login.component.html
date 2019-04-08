@@ -15,43 +15,22 @@
                             height=auto; alt="logo">
                     </div>
                     <form >
-                        <!--<div class="form-group">
-                            <label>Email address</label>
-                            <input type="email" class="form-control" formControlName="loginId" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" formControlName="pass" placeholder="Password">
-                        </div>-->
                         <mat-form-field>
                             <input matInput placeholder="Enter your email"  [formControl]="email" required>
                             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-                            <!--<p *ngIf="errmsg">{{errmsg}}</p>-->
                         </mat-form-field>
                         <mat-form-field>
                             <input matInput placeholder="Enter your password" [formControl]="password" [type]="hide ? 'password' : 'text'">
                             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <mat-error *ngIf="password.invalid">{{getPassErrorMessage()}}</mat-error>
                         </mat-form-field>
                         <div class="checkbox">
-                            <!-- <label>
-                            <input type="checkbox"> Remember Me
-                        </label> -->
                             <label class="pull-right">
                                 <a [routerLink]="['/ForgotPassword']">Forgot Password?</a>
                             </label>
                         </div><br>
-                        <!--<button type="button" class="btn btn btn-flat m-b-30 m-t-30"
-                            [routerLink]="['/dashboard']" style="margin-bottom:2.5em;">LOGIN</button>-->
-
-                         <button type="button" class="btn btn btn-flat m-b-30 m-t-30"  (click)="login()">LOGIN</button> 
+                         <button type="button" class="btn btn btn-flat m-b-30 m-t-30" style="margin-bottom:2.5em;" [disabled]="!email.valid" (click)="login()">LOGIN</button> 
                     </form>
-                    <!--<div style="padding: 2em; padding-right: 0px; padding-bottom: 0px;">
-                        <img src="./assets/images/favicon.png" width="100%" height="auto" alt=""
-                            style="width:2em;height:2em; margin-left:60%;">
-                        <div
-                            style="color:#878787;float:right;font-size: 0.6em; margin-top:0em !important; margin-bottom: 0px !important;">
-                            Powered by Yelligo</div>
-                    </div>-->
                 </div>
             </div>
         </div>

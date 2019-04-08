@@ -18,7 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './pages/login/login.service';
 import { HttpModule } from '@angular/http';
-
+import { ToastrModule } from 'ng6-toastr-notifications';
 
 
 @NgModule({
@@ -42,7 +42,8 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     HttpClientModule,
     HttpModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
 
   ],
   providers: [LoginService],

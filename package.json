@@ -43,6 +43,7 @@
     "ng-circle-progress": "^1.4.0",
     "ng-fullcalendar": "^1.7.1",
     "ng2-charts": "^1.6.0",
+    "ng6-toastr-notifications": "^1.0.4",
     "ngx-daterangepicker-material": "^1.2.7",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.0.0",
