@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableviewRoutingModule } from './tableview-routing.module';
 import { TableViewComponent } from './tableview/tableview.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { TableViewService } from "src/app/pages/tableview/tableview/tableview.service";
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
   ],
   declarations: [TableViewComponent, ],
-  providers: []
+  providers: [TableViewService]
 })
 export class TableviewModule { }

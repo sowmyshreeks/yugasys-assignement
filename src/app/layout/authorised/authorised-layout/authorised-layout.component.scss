@@ -257,7 +257,7 @@ Googel Fonts  */
   margin-bottom: 15px; }
 
 .active-menu{
-  color:#DD8643 !important;
+  color:#6f42c1 !important;
   background-color: #fafafa !important;
 }
 
@@ -618,13 +618,13 @@ aside.left-panel {
       padding-right: 30px; }
        .navbar .navbar-nav > li.active {
         background: #fafafa !important;
-        color: #DD8643 !important;
+        color: #6f42c1 !important;
        } 
     .navbar .navbar-nav li {
       width: 100%; }
       .navbar .navbar-nav li.active .menu-icon, .navbar .navbar-nav li:hover .toggle_nav_button:before,
       .navbar .navbar-nav li .toggle_nav_button.nav-open:before {
-        color: #DD8643; }
+        color: #6f42c1; }
       .navbar .navbar-nav li .dropdown-toggle:after {
         display: none; }
       .navbar .navbar-nav li > a {
@@ -637,7 +637,7 @@ aside.left-panel {
         position: relative;
         width: 100%; }
         .navbar .navbar-nav li > a:hover, .navbar .navbar-nav li > a:hover .menu-icon {
-          color: #DD8643; }
+          color: #6f42c1; }
         .navbar .navbar-nav li > a .menu-icon {
           // color: #607d8b;
           float: left;
@@ -867,7 +867,7 @@ aside.left-panel {
       content: "/\00a0"; }
 
 .right-panel header.header {
-  background: #fff;
+  background: #6f42c1;
   border-bottom: 1px solid #e8e9ed;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -887,7 +887,7 @@ aside.left-panel {
   padding-top: 7px; }
 .right-panel .navbar-header {
   width: 100%;
-  background-color: #fff;
+  // background-color: #fff;
   padding: 0 1.25em 0 0; }
   .right-panel .navbar-header > a {
     display: inline-block; }
@@ -909,7 +909,7 @@ header.fixed-top {
 
 .menutoggle {
   background-color: transparent;
-  color: #99abb4 !important;
+  color: white !important;
   cursor: pointer;
   font-size: 1em;
   height: 40px;

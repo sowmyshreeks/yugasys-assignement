@@ -2,6 +2,7 @@ import { Component, OnInit, NgModule, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import {FormControl, FormGroup, ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {NgSelectModule, NgOption} from '@ng-select/ng-select';
+import { TableViewService } from "src/app/pages/tableview/tableview/tableview.service";
 
 
 // declare var $: any;
@@ -10,6 +11,7 @@ import {NgSelectModule, NgOption} from '@ng-select/ng-select';
   styleUrls: ["tableview.component.css"]
 })
 export class TableViewComponent implements OnInit{
+  customerList: any;
 
   selectedCity: any;
   
@@ -24,163 +26,23 @@ export class TableViewComponent implements OnInit{
     {id: 5, name: 'Klaipėda'}
 ];
 
-  ngOnInit() {}
+  
 
   nav_position: string = 'end';
 
 
-  constructor(private router: Router,) { }
+  constructor(
+    private router: Router,
+    private TableViewService: TableViewService,
+  ) { }
+
+  ngOnInit() {
+    this.TableViewService.list().subscribe((res)=>{
+      this.customerList = res.data;
+    });
+  }
   
-  public customerList: any[] = [
-    {
-      companyName: 'IBM',
-      contactNo: 'John Doe',
-      purposeofVisit: 'collect Invoice',
-      location: {
-        lat: 12.798751,
-        lng: 77.386833
-      },
-      address: 'Bidadi',
-      state: 'Karnataka',
-      country:'India',
-      email:'Email@gmail.com',
-      phone:'12345678900',
-      gst_no:'A123',
-      pan_no:'AU678',
-      date:'17/1/19',
-      city:'Kaunas',
-    },
-    {
-      companyName: 'Goalsr India',
-      contactNo: 'John Doe',
-      purposeofVisit: 'collect Invoice',
-      location: {
-        lat: 12.933887,
-        lng: 77.622260
-      },
-      address: "Koramangala",
-      state: 'Karnataka',
-      country:'India',
-      email:'Email@gmail.com',
-      phone:'12345678900',
-      gst_no:'A123',
-      pan_no:'AU678',
-      date:'17/1/19',
-      city:'Pavilnys',
-    },
-    {
-      companyName: 'Goalsr India',
-      contactNo: 'John Doe',
-      purposeofVisit: 'collect Invoice',
-      location: {
-        lat: 12.933887,
-        lng: 77.622260
-      },
-      address: "Koramangala",
-      state: 'Karnataka',
-      country:'India',
-      email:'Email@gmail.com',
-      phone:'12345678900',
-      gst_no:'A123',
-      pan_no:'AU678',
-      date:'17/1/19',
-      city:'Pavilnys',
-    },
-    {
-      companyName: 'Goalsr India',
-      contactNo: 'John Doe',
-      purposeofVisit: 'collect Invoice',
-      location: {
-        lat: 12.914917,
-        lng: 77.609281
-      },
-      address: 'kengeri',
-      state: 'Karnataka',
-      country:'India',
-      email:'Email@gmail.com',
-      phone:'12345678900',
-      gst_no:'A123',
-      pan_no:'AU678',
-      date:'17/1/19',
-      city:'Vilnius',
-    },
-    {
-      companyName: 'Goalsr India',
-      contactNo: 'John Doe',
-      purposeofVisit: 'collect Invoice',
-      location: {
-        lat: 12.908726,
-        lng: 77.624209
-      },
-      address: 'Bommanahalli',
-      state: 'Karnataka',
-      country:'India',
-      email:'Email@gmail.com',
-      phone:'12345678900',
-      gst_no:'A123',
-      pan_no:'AU678',
-      date:'17/1/19',
-      city:'Pabradė',
-    },
-    
-    {
-      companyName: 'ACC',
-      contactNo: 'John Doe',
-      purposeofVisit: 'collect Invoice',
-      location: {
-        lat: 12.867040,
-        lng: 77.333881
-      },
-      address: 'Manchanabele',
-      state: 'Karnataka',
-      country:'India',
-      email:'Email@gmail.com',
-      phone:'12345678900',
-      gst_no:'A123',
-      pan_no:'AU678',
-      date:'17/1/19',
-      city:'Vilnius',
-    },
-    {
-      companyName: 'ACC',
-      contactNo: 'John Doe',
-      purposeofVisit: 'collect Invoice',
-      location: {
-        lat: 12.867040,
-        lng: 77.333881
-      },
-      address: 'Manchanabele',
-      state: 'Karnataka',
-      country:'India',
-      email:'Email@gmail.com',
-      phone:'12345678900',
-      gst_no:'A123',
-      pan_no:'AU678',
-      date:'17/1/19',
-      city:'Vilnius',
-    },
-    
-    {
-      companyName: 'ACC',
-      contactNo: 'John Doe',
-      purposeofVisit: 'collect Invoice',
-      location: {
-        lat: 12.547000,
-        lng: 77.423100
-      },
-      address: 'Kanakapura',
-      state: 'Karnataka',
-      country:'India',
-      email:'Email@gmail.com',
-      phone:'12345678900',
-      gst_no:'A123',
-      pan_no:'AU678',
-      date:'17/1/19',
-      city:'Vilnius',
-    }
-
-  ];
-
+  
  
 
 }
