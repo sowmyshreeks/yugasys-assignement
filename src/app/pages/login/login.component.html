@@ -6,7 +6,7 @@
 
                 <div class="alert alert-info alert-dismissible" style="width:23em;color: #dc3545;" *ngIf="loginErorMsg">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Info!</strong> {{loginErorMsg}}.
+                    <strong>Info!</strong> {{errmsg}}.
                 </div>
 
                 <div class="login-form">
@@ -14,7 +14,7 @@
                         <img class="align-content img-responsive" src="./assets/images/angular-226066.png" width=100em;
                             height=auto; alt="logo">
                     </div>
-                    <form [formGroup]="loginForm">
+                    <form >
                         <!--<div class="form-group">
                             <label>Email address</label>
                             <input type="email" class="form-control" formControlName="loginId" placeholder="Email">
@@ -26,6 +26,7 @@
                         <mat-form-field>
                             <input matInput placeholder="Enter your email"  [formControl]="email" required>
                             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                            <!--<p *ngIf="errmsg">{{errmsg}}</p>-->
                         </mat-form-field>
                         <mat-form-field>
                             <input matInput placeholder="Enter your password" [formControl]="password" [type]="hide ? 'password' : 'text'">

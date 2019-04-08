@@ -2,7 +2,7 @@ import { Component, OnInit, NgModule, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import {FormControl, FormGroup, ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {NgSelectModule, NgOption} from '@ng-select/ng-select';
-import * as moment from 'moment';
+
 
 // declare var $: any;
 @Component({
