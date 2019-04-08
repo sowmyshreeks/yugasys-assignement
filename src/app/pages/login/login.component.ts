@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from './login.service';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
@@ -18,6 +19,7 @@ export class LoginComponent {
 
   constructor(
     private router: Router,
+    private LoginService : LoginService,
     public toastr: ToastrManager
   ) { }
 
@@ -37,29 +39,23 @@ export class LoginComponent {
   }
 
 
-  login(){
-    let emailId = "sowmya.ks.65@gmail.com";
-    let pass = "123456ks";
-
-    if(this.email.value == emailId && this.password.value == pass){
-      this.router.navigate(['/dashboard']);
-    }else if(this.password.value == ""){
-      this.toastr.warningToastr('Password is Required.');
-
-    }
-    else if(this.password.value != pass){
-      this.toastr.warningToastr('Password is Incorrect.');
-
-    }else
-    {
-      this.toastr.warningToastr('Emailid not exists.');
-    }
-  }
+login(){
+  let loginData = {
+    "email": this.email.value,
+    "password": this.password.value
 }
-// this.LoginService.login(loginData).subscribe((data) => {
-    //   if(data.data.userId == null){
-    //     this.loginErorMsg = 'InValid login Id Or Password';
-    //   }else
-    //   this.router.navigate(['/dashboard']);
+if(loginData.password){
+  this.LoginService.login(loginData).subscribe((data) => {
+      if(data.token == "QpwL5tke4Pnpja7X"){
+        this.router.navigate(['/dashboard']);
+      }else{
+        this.toastr.warningToastr('Emailid and Password dose not match.');
+      }
       
-    // })
+    })
+      }else{
+        this.toastr.warningToastr('Password is Required.');
+        
+      }
+}
+}

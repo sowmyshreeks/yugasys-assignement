@@ -29,7 +29,7 @@ export class LoginService {
     let header = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: header });
     // Url is the  actual baseUrl
-    return this.http.post(environment.serverUrl +'/user/login',JSON.stringify(userdata),  options)
+    return this.http.post(environment.serverUrl +'/api/login',JSON.stringify(userdata),  options)
       .map(Response =>
          {return Response.json()})
       .catch(this.handleErrors);
