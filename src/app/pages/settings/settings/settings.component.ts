@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SettingsService } from "src/app/pages/settings/settings/settings.service";
 
 @Component({
   selector: 'app-settings',
@@ -19,9 +20,15 @@ export class SettingsComponent implements OnInit {
 ]
 
 
-  constructor() { }
+  constructor(
+    private SettingsService : SettingsService,
+  ) { }
 
   ngOnInit() {
-  }
+    this.SettingsService.profile().subscribe((res)=>{
+  this.profileData = res.data;
+    });
+    
 
+}
 }

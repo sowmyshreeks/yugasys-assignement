@@ -20,17 +20,18 @@
     <form>
       <div class="row">
           <div class="col md 6">
+              <img  [src]="profileData.avatar" alt="Attached file" style="width: 100%">
               <div class="form-group">
-                  <label>Name</label>
-                  <input type="text" class="form-control" [(ngModel)]="profileData[0].name" name="something">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" [(ngModel)]="profileData.first_name" name="something">
               </div>
               <div class="form-group">
-                  <label>Email Address </label>
-                  <input type="email" class="form-control" [(ngModel)]="profileData[0].userId" name="userId">
+                  <label>Last Name </label>
+                  <input type="email" class="form-control" [(ngModel)]="profileData.last_name" name="userId">
               </div>
               <div class="form-group">
-                  <label>Phone Number</label>
-                  <input type="number" class="form-control" [(ngModel)]="profileData[0].phoneNumber" name="phone">
+                  <label>Id</label>
+                  <input type="number" class="form-control" [(ngModel)]="profileData.id" name="phone">
               </div>
           </div>
           <div class="col md 6">

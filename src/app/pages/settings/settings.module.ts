@@ -5,6 +5,7 @@ import { SettingsRoutingModule } from './settings-routing.module';
 import { SettingsComponent } from './settings/settings.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material';
+import { SettingsService } from "src/app/pages/settings/settings/settings.service";
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { MatIconModule } from '@angular/material';
 
   ],
   declarations: [SettingsComponent,],
+  providers : [SettingsService]
   
 })
 export class SettingsModule { }
