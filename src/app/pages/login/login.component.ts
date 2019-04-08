@@ -44,7 +44,11 @@ export class LoginComponent {
     if(this.email.value == emailId && this.password.value == pass){
       this.router.navigate(['/dashboard']);
     }else if(this.password.value == ""){
-      this.toastr.warningToastr('Password is required.');
+      this.toastr.warningToastr('Password is Required.');
+
+    }
+    else if(this.password.value != pass){
+      this.toastr.warningToastr('Password is Incorrect.');
 
     }else
     {
